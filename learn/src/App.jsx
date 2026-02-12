@@ -10,8 +10,12 @@ import Blog from './Pages/Blog';
 import BlogDetails from './Pages/BlogDetails';
 import AddBlog from './Pages/AddBlog';
 import Dashboard from './Pages/Dashboard';
+import Settings from './Pages/Settings';
 import Chatbox from './components/Chatbox';
 import Footer from './components/Footer';
+import Enroll from './Pages/Enroll';
+import Course from './Pages/Course';
+
 
 function App() {
   return (
@@ -30,7 +34,12 @@ function App() {
             <Route path="/blog/:id" element={<BlogDetails />} />
             <Route path="/add-blog" element={<AddBlog />} />
             <Route path="/dashboard" element={<Dashboard />} />
-
+            <Route path="/Get" element={<Courses/>}/>
+            <Route path="/Learn" element={<Blog/>}/>
+            <Route path="/enroll/:id" element={<Enroll />} />
+            <Route path="/course/:id" element={<Course />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="/regi" element={<Register />} />
         </Routes>
     </div>
     <Footer />

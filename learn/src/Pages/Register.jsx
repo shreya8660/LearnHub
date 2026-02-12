@@ -1,34 +1,58 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Register() {
+  const navigate = useNavigate();
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    if (name && email && password) {
+      localStorage.setItem("username", name);
+      localStorage.setItem("email", email);
+      localStorage.setItem("isLoggedIn", "true");
+
+      navigate("/dashboard");
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gray-100 pt-20 px-6">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
 
         <h2 className="text-3xl font-bold text-center mb-6">Register</h2>
 
-        <div className="space-y-4">
+        <form onSubmit={handleRegister} className="space-y-4">
 
           <input
             type="text"
             placeholder="Full Name"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#39FF14]"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#39FF14]"
           />
 
           <input
             type="email"
             placeholder="Email"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#39FF14]"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#39FF14]"
           />
 
           <input
             type="password"
             placeholder="Password"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#39FF14]"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#39FF14]"
           />
 
-          <button className="w-full bg-[#39FF14] text-black font-semibold py-2 rounded-lg hover:opacity-90 hover:bg-[#0B0B0B] hover:text-[white] transition">
+          <button className="w-full bg-[#39FF14] text-black py-2 rounded-lg font-semibold hover:bg-[#0B0B0B] hover:text-white">
             Create Account
           </button>
 
@@ -39,7 +63,7 @@ function Register() {
             </Link>
           </p>
 
-        </div>
+        </form>
       </div>
     </section>
   );

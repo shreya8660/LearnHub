@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -12,13 +13,14 @@ function Home() {
           Start your journey today.</p>
 
           <div className='mt-8 flex justify-center gap-4'>
-            <button className='bg-[#0B0B0B] text-white px-6 py-3 rounded-lg hover:bg-[#39FF14] hover:text-[#0B0B0B] transition'>
+            
+            <Link to='/Get' className='bg-[#0B0B0B] text-white px-6 py-3 rounded-lg hover:bg-[#39FF14] hover:text-[#0B0B0B] transition'>
                 Get Started
-            </button>
+            </Link>
 
-            <button className='border border-[#39FF14] text-[#0B0B0B] px-6 py-3 rounded-lg hover:bg-[#0B0B0B] hover:text-[#39FF14] transition'>
+            <Link to='/Learn' className='border border-[#39FF14] text-[#0B0B0B] px-6 py-3 rounded-lg hover:bg-[#0B0B0B] hover:text-[#39FF14] transition'>
                 Learn More
-            </button>
+            </Link>
           </div>
 
         </div>
