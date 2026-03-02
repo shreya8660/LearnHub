@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 function Account() {
 
-  const navigate = useNavigate(); // ✅ ADDED
-  const [showModal, setShowModal] = useState(false); // ✅ ADDED
+  const navigate = useNavigate(); 
+  const [showModal, setShowModal] = useState(false); 
 
   const [image, setImage] = useState(
     localStorage.getItem("profileImage")
@@ -59,7 +59,7 @@ function Account() {
     localStorage.setItem("email", email);
   };
 
-  // 🔥 Modified only inside logic (no structure removed)
+  
   const handleDeleteAccount = () => {
     localStorage.clear();
     navigate("/regi");

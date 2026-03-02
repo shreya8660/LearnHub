@@ -16,7 +16,7 @@ function Blog() {
   return (
     <section className="pt-24 px-6 min-h-screen bg-gray-100">
 
-      {/* Search + Filter */}
+      
       <div className="max-w-4xl mx-auto mb-8 flex flex-col md:flex-row gap-4">
 
         <input

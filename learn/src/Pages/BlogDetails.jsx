@@ -23,6 +23,7 @@ function BlogDetails() {
         <p className="mt-4 text-gray-600">{blog.content}</p>
 
         {/* Comment Section */}
+
         <div className="mt-8">
           <h3 className="font-semibold mb-4">Comments</h3>
 
@@ -46,7 +47,7 @@ function BlogDetails() {
               onClick={addComment}
               className="bg-[#39FF14] px-4 py-2 rounded font-semibold"
             >
-              Post
+              POST
             </button>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { coursesData } from "../data/coursesData";
 
 function Course() {
 
-  // 🔥 Hooks first
+  
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -56,7 +56,7 @@ function Course() {
     );
   };
 
-  // ❌ If course not found
+ 
   if (!course) {
     return (
       <div className="pt-24 text-center text-red-500">
@@ -65,7 +65,7 @@ function Course() {
     );
   }
 
-  // 🔒 If not enrolled
+  
   if (!isEnrolled) {
     return (
       <div className="pt-24 text-center text-red-500">
@@ -74,7 +74,7 @@ function Course() {
     );
   }
 
-  // 📘 Modules list
+  
   const modules = [
     "Introduction",
     "Core Concepts",
@@ -88,7 +88,7 @@ function Course() {
     <section className="min-h-screen pt-24 px-6 bg-gray-100">
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow">
 
-        {/* 🔙 Back Button */}
+        
         <button
           onClick={() => navigate("/dashboard")}
           className="mb-4 text-[#39FF14] font-semibold hover:text-[#0B0B0B]"
@@ -96,7 +96,6 @@ function Course() {
           ← Back to Dashboard
         </button>
 
-        {/* 📚 Title */}
         <h1 className="text-3xl font-bold mb-4">
           {course.title}
         </h1>
@@ -105,7 +104,7 @@ function Course() {
           {course.description}
         </p>
 
-        {/* 🎥 Video Section */}
+        
         <div className="mb-6">
           <video
             controls
@@ -118,7 +117,7 @@ function Course() {
           </video>
         </div>
 
-        {/* 📊 Progress Bar */}
+       
         <div className="mb-6">
           <div className="w-full bg-gray-300 rounded-full h-4">
             <div
@@ -132,7 +131,7 @@ function Course() {
           </p>
         </div>
 
-        {/* 📘 Modules Section */}
+        
         <div className="space-y-4">
           {modules.map((module, index) => (
             <div
