@@ -10,6 +10,8 @@ function Chatbox() {
   const sendMessage = () => {
     if (!message.trim()) return;
 
+
+
     const newMessages = [
       ...messages,
       { text: message, sender: "user" },
@@ -23,6 +25,8 @@ function Chatbox() {
   return (
     <>
       {/* Floating Button */}
+
+      
       <button
         onClick={() => setOpen(!open)}
         className="fixed bottom-6 right-6 bg-[#39FF14] text-black p-4 rounded-full shadow-lg hover:scale-110 transition hover:bg-[#0B0B0B]"
