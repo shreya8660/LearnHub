@@ -10,7 +10,7 @@ function Dashboard() {
 
   const navigate = useNavigate();
 
-  // 🔥 ADDED: Sync username if changed
+
   useEffect(() => {
     const syncUser = () => {
       setUsername(localStorage.getItem("username") || "Sherry");
@@ -72,9 +72,9 @@ function Dashboard() {
       {/* Main Content */}
       <div className="flex-1 p-8">
 
-        {/* 🔥 UPDATED: Dynamic Username */}
+        
         <h1 className="text-3xl font-bold mb-8">
-          Welcome back, {username} 👋
+          Welcome back, {username} 
         </h1>
 
         {/* Overview Cards */}

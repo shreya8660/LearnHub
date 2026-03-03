@@ -25,7 +25,6 @@ function Chatbox() {
   return (
     <>
       {/* Floating Button */}
-
       
       <button
         onClick={() => setOpen(!open)}
