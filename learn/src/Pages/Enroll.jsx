@@ -59,7 +59,7 @@ function Enroll() {
           {course.price}
         </p>
 
-        {/* STEP 1 — USER FORM */}
+        
         {step === "form" && (
           <form onSubmit={handleFormSubmit} className="space-y-4">
 
@@ -124,7 +124,7 @@ function Enroll() {
           </form>
         )}
 
-        {/* STEP 3 — SUCCESS */}
+        
         {step === "success" && (
           <div className="text-center">
             <h3 className="text-2xl font-bold text-green-600">
